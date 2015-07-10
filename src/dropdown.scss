@@ -1,0 +1,29 @@
+.dropdown-navigation__header {
+  @extend .mdl-navigation__link;
+  .dropdown-inactive {
+    display: none;
+  }
+  .material-icons {
+    pointer-events:none;
+  }
+  &.dropdown-is-active {
+    .dropdown-active {
+      display: none;
+    }
+    .dropdown-inactive {
+      display: inline;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dropdown-navigation__menu {
+  @extend .mdl-navigation;
+  display:none;
+  &.dropdown-is-active {
+    display:flex;
+    margin-left:5px;
+  }
+}
