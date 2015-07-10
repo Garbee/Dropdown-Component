@@ -26,7 +26,8 @@ DropdownComponent.prototype.init = function() {
   this.element_.addEventListener('click', this.boundClickHandler);
 };
 
-DropdownComponent.prototype.mdlDowngrade_ = functio() {
+DropdownComponent.prototype.mdlDowngrade_ = function() {
+  "use strict";
     this.element_.removeEventListener('click', this.boundClickHandler);
 };
 
