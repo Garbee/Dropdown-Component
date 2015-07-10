@@ -16,10 +16,22 @@ WARNING: This is still very early.
 1. Code an anchor to be the trigger for the dropdown. Give it the `component-js-dropdown` class to setup the dropdown menu. Also provided is a `dropdown-navigation__header` class that styles it like a normal menu item.
 
 ```html
-    <a class="dropdown-navigation__header component-js-dropdown" title="Gaming">Gaming</a>
+    <a class="dropdown-navigation__header component-js-dropdown" title="Gaming">
+        Gaming
+    </a>
 ```
 
-2. The *next child* in the DOM should be menu this trigger will target. This element contains the anchors for the menu.
+2. Add the arrow icons within the header. These will be displayed so users know the dropdown's state.
+
+```html
+    <a class="dropdown-navigation__header component-js-dropdown" title="Gaming">
+        Gaming
+        <span class="material-icons dropdown-inactive">arrow_drop_down</span>
+        <span class="material-icons dropdown-active ">arrow_drop_up</span>
+    </a>
+```
+
+3. The *next child* in the DOM should be menu this trigger will target. This element contains the anchors for the menu.
 
 ```html
 <div class="dropdown-navigation__menu">
